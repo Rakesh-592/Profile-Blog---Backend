@@ -45,7 +45,7 @@ app.post("/register", async (req, res) => {
         process.env.JWT_SECRET
       );
       res.cookie("token", token);
-      res.send("Registered");
+      res.redirect("/login");
     });
   });
 });
